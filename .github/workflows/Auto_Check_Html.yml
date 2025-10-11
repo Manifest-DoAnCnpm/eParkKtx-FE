@@ -25,6 +25,7 @@ jobs:
 
       - name: Build app
         run: npm run build
+        working-directory: ./client
 
       - name: Validate HTML files
         uses: anishathalye/proof-html@v1.1.0
