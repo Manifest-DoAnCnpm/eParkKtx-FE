@@ -29,7 +29,7 @@ jobs:
       - name: Validate HTML files
         uses: anishathalye/proof-html@v1.1.0
         with:
-          directory: ./build
+          directory: ./client/build
           check_links: true
           external_only: false
           fail_on_error: true
