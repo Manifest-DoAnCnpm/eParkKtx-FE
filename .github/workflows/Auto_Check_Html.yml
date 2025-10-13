@@ -1,0 +1,36 @@
+# By NghiaTran
+name: Auto-Check-HTML
+
+on:
+  push:
+    branches:
+    - main
+    - master
+
+jobs:
+  auto-check-html:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup env
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install
+        run: npm ci
+        working-directory: ./client
+
+      - name: Build app
+        run: npm run build
+        working-directory: ./client
+
+      - name: Validate HTML files
+        uses: anishathalye/proof-html@v1.1.0
+        with:
+          directory: ./client/build
+          check_links: true
+          external_only: false
+          fail_on_error: true
