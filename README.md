@@ -2,6 +2,22 @@
 
 Quản lý gửi xe KTX - Node.js (backend) & React.js (frontend)
 
+# eParkKTX Frontend (React + Webpack + Babel)
+
+## Yêu cầu cài đặt
+- Node.js >= 16
+- npm >= 8
+
+## Chạy dự án
+```bash
+npm start
+```
+- Ứng dụng sẽ chạy tại: http://localhost:3000/
+
+## Ghi chú
+- Nếu gặp lỗi "Module parse failed: Unexpected token" với JSX, hãy chắc chắn đã cài đúng các package trên.
+- Có thể chỉnh sửa các cấu hình trong `webpack.config.js` và `babel.config.json` nếu cần.
+
 ## Cấu trúc dự án
 
 ```
@@ -22,31 +38,12 @@ Quản lý gửi xe KTX - Node.js (backend) & React.js (frontend)
 │       ├── App.js     # Router chính
 │       └── index.js   # Entry point React
 │
-├── server/            # Backend Node.js
-│   ├── src/
-│   │   ├── models/    # Mongoose models
-│   │   ├── routes/    # API routes
-│   │   └── index.js   # Entry point Express
-│   ├── .env.example   # Biến môi trường mẫu
-│   └── package.json   # Thông tin & scripts backend
-│
 └── README.md          # Hướng dẫn dự án
 ```
 
 ## Cách sử dụng
 
-### 1. Backend (server)
-
-```sh
-cd server
-cp .env.example .env   # hoặc tự tạo file .env từ mẫu
-npm install
-npm run dev            # hoặc npm start
-```
-- Server mặc định chạy ở http://localhost:5000
-- Cần cài MongoDB (local/cloud) và chỉnh biến MONGO_URI trong .env
-
-### 2. Frontend (client)
+### Frontend (client)
 
 ```sh
 cd client
@@ -55,7 +52,16 @@ npm start
 ```
 - Ứng dụng React chạy ở http://localhost:8080 (hoặc port webpack config)
 
-### 3. Một số lưu ý
+## Cài đặt các package cần thiết cho Babel/Webpack (nếu chưa có)
+```bash
+npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader style-loader css-loader file-loader
+```
+
+## Cấu hình đã có sẵn
+- `webpack.config.js`: Đã cấu hình Babel loader cho JSX/ES6, CSS, ảnh.
+- `babel.config.json`: Đã preset cho React.
+
+### Một số lưu ý
 - Chỉnh sửa cấu hình kết nối backend trong các file service (nếu cần).
 - Đảm bảo backend chạy trước khi dùng các chức năng cần API.
 - Có thể mở rộng thêm các thư mục khác theo nhu cầu.

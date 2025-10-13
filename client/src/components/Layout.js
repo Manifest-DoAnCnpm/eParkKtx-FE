@@ -1,8 +1,10 @@
 import React from "react";
 
+import Navbar from "./Navbar";
+
 const Layout = ({ children }) => (
   <div>
-    {/* Navbar, Sidebar, Footer sẽ đặt ở đây */}
+    <Navbar />
     {children}
   </div>
 );

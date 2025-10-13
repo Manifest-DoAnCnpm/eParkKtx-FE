@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -17,27 +17,26 @@ import NotifyPage from "./pages/NotifyPage";
 import KTXPage from "./pages/KTXPage";
 
 function App() {
+  console.log("App rendered");
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/vehicles" element={<VehiclePage />} />
-          <Route path="/parking" element={<ParkingPage />} />
-          <Route path="/payment" element={<PaymentPage />} />
-          <Route path="/forum" element={<ForumPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/contracts" element={<ContractPage />} />
-          <Route path="/revenue" element={<RevenuePage />} />
-          <Route path="/slots" element={<SlotPage />} />
-          <Route path="/notify" element={<NotifyPage />} />
-          <Route path="/ktx" element={<KTXPage />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/vehicles" element={<VehiclePage />} />
+        <Route path="/parking" element={<ParkingPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/forum" element={<ForumPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/contracts" element={<ContractPage />} />
+        <Route path="/revenue" element={<RevenuePage />} />
+        <Route path="/slots" element={<SlotPage />} />
+        <Route path="/notify" element={<NotifyPage />} />
+        <Route path="/ktx" element={<KTXPage />} />
+      </Routes>
+    </Layout>
   );
 }
 
