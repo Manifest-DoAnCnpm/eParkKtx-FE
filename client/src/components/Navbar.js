@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__logo">
         <img src={logo} alt="Logo" />
-        <div className="navbar__brand">eParkKTX<br /><span className="navbar__subtitle">Parking System</span></div>
+        {/* <div className="navbar__brand">eParkKTX<br /><span className="navbar__subtitle">Parking System</span></div> */}
       </div>
       <ul className="navbar__menu">
         <li><Link to="/">Trang chủ</Link></li>
