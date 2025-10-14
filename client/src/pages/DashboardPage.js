@@ -19,7 +19,7 @@ const DashboardPage = () => {
       <aside className="dashboard-sidebar">
         <nav className="sidebar-menu">
           <button className="sidebar-menu-btn active">Dashboard</button>
-          <button className="sidebar-menu-btn"><img src={add} alt="" />Đăng ký thẻ mới</button>
+          <button className="sidebar-menu-btn"><Link to="/register-card"><img src={add} alt="" />Đăng ký thẻ mới</Link></button>
           <button className="sidebar-menu-btn"><img src={calendar} alt="" />Gia hạn thẻ</button>
           <button className="sidebar-menu-btn"><img src={document} alt="" />Lịch sử & hóa đơn</button>
           <button className="sidebar-menu-btn"><Link to="/vehicles">
@@ -142,7 +142,7 @@ const DashboardPage = () => {
             </div>
 
             <button className="add-card-btn">
-              <img src={add} alt="Thêm thẻ" />
+              <Link to="/register-card"><img src={add} alt="Thêm thẻ" /></Link>
               Đăng ký thẻ mới
             </button>
           </div>

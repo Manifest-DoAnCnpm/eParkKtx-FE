@@ -8,5 +8,8 @@
     "file-loader": "^6.2.0",
     "react-scripts": "^5.0.1",
     "style-loader": "^4.0.0"
+  },
+  "dependencies": {
+    "@payos/node": "^2.0.3"
   }
 }
