@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/DashboardPage.css";
+import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import notify from "../assets/notification.png"
 import search from "../assets/search-bar-01.png"
@@ -21,7 +22,9 @@ const DashboardPage = () => {
           <button className="sidebar-menu-btn"><img src={add} alt="" />Đăng ký thẻ mới</button>
           <button className="sidebar-menu-btn"><img src={calendar} alt="" />Gia hạn thẻ</button>
           <button className="sidebar-menu-btn"><img src={document} alt="" />Lịch sử & hóa đơn</button>
-          <button className="sidebar-menu-btn"><img src={motorcycle} alt="" />Xe của tôi</button>
+          <button className="sidebar-menu-btn"><Link to="/vehicles">
+          <img src={motorcycle} alt="" />Xe của tôi
+          </Link></button>
         </nav>
         <div className="sidebar-settings">
           <button className="sidebar-menu-btn"><img src={settings} alt="" />Cài đặt</button>
