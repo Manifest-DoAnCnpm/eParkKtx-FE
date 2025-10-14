@@ -39,12 +39,18 @@
   border-radius: 10px;
   padding: 12px;
   font-size: 16px;
-  color: #2b317a;
   font-weight: 500;
   text-align: left;
   cursor: pointer;
+  color: #2b317a;
   transition: background 0.2s;
 }
+
+.sidebar-menu-btn a {
+  text-decoration: none;
+  color: #2b317a;
+}
+
 .sidebar-menu-btn.active,
 .sidebar-menu-btn:hover {
   background: #1476d8;
