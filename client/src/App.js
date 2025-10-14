@@ -16,6 +16,7 @@ import RevenuePage from "./pages/RevenuePage";
 import SlotPage from "./pages/SlotPage";
 import NotifyPage from "./pages/NotifyPage";
 import KTXPage from "./pages/KTXPage";
+import RegisterCardPage from "./pages/RegisterCardPage";
 
 function App() {
   console.log("App rendered");
@@ -37,6 +38,7 @@ function App() {
         <Route path="/slots" element={<SlotPage />} />
         <Route path="/notify" element={<NotifyPage />} />
         <Route path="/ktx" element={<KTXPage />} />
+        <Route path="/register-card" element={<RegisterCardPage />} />
       </Routes>
     </Layout>
   );
