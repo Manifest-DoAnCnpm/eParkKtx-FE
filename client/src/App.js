@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
+import StudentLoginPage from "./pages/LoginStudent";
+import ManagerLoginPage from "./pages/LoginManager";
 import ProfilePage from "./pages/ProfilePage";
 import VehiclePage from "./pages/VehiclePage";
 import ParkingPage from "./pages/ParkingPage";
@@ -23,7 +24,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/loginstudent" element={<StudentLoginPage />} />
+        <Route path="/loginmanager" element={<ManagerLoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/vehicles" element={<VehiclePage />} />
         <Route path="/parking" element={<ParkingPage />} />
