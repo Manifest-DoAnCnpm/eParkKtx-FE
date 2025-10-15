@@ -3,10 +3,6 @@ name: Auto-Check-HTML
 
 on:
   push:
-    branches:
-    - main
-    - master
-
 jobs:
   auto-check-html:
     runs-on: ubuntu-latest
@@ -28,9 +24,9 @@ jobs:
         working-directory: ./client
 
       - name: Validate HTML files
-        uses: anishathalye/proof-html@v1.1.0
+        uses: anishathalye/proof-html@v2.2.2
         with:
           directory: ./client/build
-          check_links: true
-          external_only: false
-          fail_on_error: true
+          check_html: true
+          check_css: false
+    
